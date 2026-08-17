@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0a0b">
+<title>Ta place est réservée — Deviens Inarrêtable</title>
+<meta name="description" content="Ta place pour les 2 soirées Deviens Inarrêtable est réservée. Ajoute la date à ton agenda et surveille ta boîte email.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .merci { min-height:100svh; display:grid; place-items:center; padding:80px 0; position:relative; overflow:hidden; }
+  .merci__fond { position:absolute; inset:0; z-index:0; }
+  .merci__fond img { width:100%; height:100%; object-fit:cover; opacity:.34; animation:kenburns 50s ease-in-out infinite alternate; }
+  .merci__voile { position:absolute; inset:0; z-index:1;
+    background: radial-gradient(90% 80% at 50% 20%, rgba(217,119,6,.14), transparent 60%),
+                linear-gradient(180deg, rgba(10,10,11,.9), rgba(10,10,11,.96)); }
+  .merci__c { position:relative; z-index:2; max-width:660px; text-align:center; }
+  .coche { width:78px; height:78px; margin:0 auto 34px; border-radius:50%;
+    border:1px solid rgba(217,119,6,.4); display:grid; place-items:center;
+    background:radial-gradient(circle, rgba(217,119,6,.2), transparent 70%); }
+  .coche svg { width:34px; height:34px; stroke:var(--ambre-clair); fill:none; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round;
+    stroke-dasharray:40; stroke-dashoffset:40; animation:trace 1s var(--ease) .25s forwards; }
+  @keyframes trace { to { stroke-dashoffset:0; } }
+  .recap { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin:44px 0 36px; text-align:left; }
+  .recap__c { padding:22px 24px; border:1px solid var(--bord); border-radius:12px; background:var(--charbon); }
+  .recap__l { font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--gris-fonce); margin-bottom:8px; }
+  .recap__v { font-family:var(--serif); font-size:21px; }
+  .etapes { text-align:left; margin:40px 0; display:grid; gap:2px; }
+  .etapes li { display:flex; gap:16px; padding:20px 0; border-bottom:1px solid var(--bord); align-items:flex-start; }
+  .etapes__n { font-family:var(--serif); font-size:15px; color:var(--ambre-clair); flex:0 0 26px; }
+  .etapes__t { font-weight:600; margin-bottom:5px; }
+  .etapes__d { color:var(--gris); font-size:15px; margin:0; line-height:1.65; }
+  .actions { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:8px; }
+  @media (max-width:700px){ .recap{grid-template-columns:1fr;} .actions .btn{width:100%;} }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<main class="merci">
+  <div class="merci__fond" aria-hidden="true"><img src="brand/visual-2.png" alt="" width="1024" height="1024"></div>
+  <div class="merci__voile" aria-hidden="true"></div>
+
+  <div class="wrap merci__c">
+    <div class="coche" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 7"/></svg>
+    </div>
+
+    <p class="eyebrow" style="justify-content:center">Inscription confirmée</p>
+    <h1 class="h2" id="titre">Ta place est <span class="it">réservée.</span></h1>
+    <p class="lead" style="margin-top:20px">Il te reste une seule chose à faire maintenant : bloquer les deux créneaux. C'est ce qui fait la différence entre s'inscrire et y être vraiment.</p>
+
+    <div class="recap">
+      <div class="recap__c">
+        <p class="recap__l">Soirée 1</p>
+        <p class="recap__v">Dim. 23 août — 20h00</p>
+      </div>
+      <div class="recap__c">
+        <p class="recap__l">Soirée 2</p>
+        <p class="recap__v">Lun. 24 août — 20h00</p>
+      </div>
+    </div>
+
+    <div class="actions">
+      <a class="btn" id="btnGoogle" href="#" target="_blank" rel="noopener">Ajouter à Google Calendar</a>
+      <a class="btn btn--fantome" id="btnIcs" href="#" download="deviens-inarretable.ics">Ajouter à Apple / Outlook</a>
+    </div>
+
+    <ol class="etapes">
+      <li><span class="etapes__n">01</span><div><p class="etapes__t">Surveille ta boîte email</p><p class="etapes__d">Le lien Zoom arrive dans les prochaines minutes. S'il n'est pas là, regarde dans les spams ou l'onglet Promotions — et fais-le glisser dans ta boîte principale.</p></div></li>
+      <li><span class="etapes__n">02</span><div><p class="etapes__t">Tu recevras deux rappels</p><p class="etapes__d">Un la veille, un dernier une heure avant le début. Pas de rappel inutile entre-temps.</p></div></li>
+      <li><span class="etapes__n">03</span><div><p class="etapes__t">Viens avec une question précise</p><p class="etapes__d">Un participant est coaché en direct à chaque soirée. Ceux qui savent quoi demander sont ceux qui repartent avec le plus.</p></div></li>
+    </ol>
+
+    <div style="padding-top:26px;border-top:1px solid var(--bord)">
+      <p class="lead" style="font-size:16px">Tu connais un entrepreneur qui tourne au ralenti en ce moment ?</p>
+      <div class="actions" style="margin-top:16px">
+        <a class="btn btn--fantome btn--sm" id="partageWa" href="#" target="_blank" rel="noopener">Partager sur WhatsApp</a>
+        <button class="btn btn--fantome btn--sm" id="copier">Copier le lien</button>
+      </div>
+    </div>
+
+    <p style="margin-top:44px"><a href="index.html" style="color:var(--gris-fonce);font-size:13.5px;text-decoration:underline;text-underline-offset:3px">Revenir à la page de l'événement</a></p>
+  </div>
+</main>
+
+<script>
+(function(){
+  "use strict";
+  // Personnalisation légère si le prénom a été mémorisé
+  try {
+    var p = sessionStorage.getItem("di_prenom");
+    if (p) document.getElementById("titre").innerHTML = p + ", ta place est <span class='it'>réservée.</span>";
+  } catch(e){}
+
+  var TITRE = "Deviens Inarrêtable — Soirée live avec Jeremy Mezadorian";
+  var LIEU  = "En ligne (Zoom) — le lien arrive par email";
+  var DESC  = "Deux soirées pour comprendre ce qui bloque vraiment et reprendre le pouvoir. Le lien Zoom est envoyé par email.";
+  var URL   = location.origin + "/maintenant";
+
+  // Google Calendar (première soirée)
+  document.getElementById("btnGoogle").href =
+    "https://calendar.google.com/calendar/render?action=TEMPLATE"
+    + "&text=" + encodeURIComponent(TITRE)
+    + "&dates=20260823T180000Z/20260823T193000Z"
+    + "&details=" + encodeURIComponent(DESC + "\n" + URL)
+    + "&location=" + encodeURIComponent(LIEU);
+
+  // Fichier .ics généré côté client : les DEUX soirées
+  function ics(){
+    var L = [
+      "BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Deviens Inarretable//FR","CALSCALE:GREGORIAN","METHOD:PUBLISH"
+    ];
+    [["20260823T180000Z","20260823T193000Z","Soiree 1"],
+     ["20260824T180000Z","20260824T193000Z","Soiree 2"]].forEach(function(e,i){
+      L = L.concat([
+        "BEGIN:VEVENT",
+        "UID:di-2026-0" + (i+1) + "@deviens-inarretable.com",
+        "DTSTAMP:" + new Date().toISOString().replace(/[-:]/g,"").split(".")[0] + "Z",
+        "DTSTART:" + e[0],
+        "DTEND:" + e[1],
+        "SUMMARY:" + TITRE + " (" + e[2] + ")",
+        "DESCRIPTION:" + DESC.replace(/\n/g,"\\n"),
+        "LOCATION:" + LIEU,
+        "BEGIN:VALARM","TRIGGER:-PT60M","ACTION:DISPLAY","DESCRIPTION:Ca commence dans 1 heure","END:VALARM",
+        "BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY","DESCRIPTION:C est demain 20h","END:VALARM",
+        "END:VEVENT"
+      ]);
+    });
+    L.push("END:VCALENDAR");
+    return L.join("\r\n");
+  }
+  var b = new Blob([ics()], {type:"text/calendar;charset=utf-8"});
+  document.getElementById("btnIcs").href = window.URL.createObjectURL(b);
+
+  // Partage
+  document.getElementById("partageWa").href =
+    "https://wa.me/?text=" + encodeURIComponent("Je viens de réserver ma place pour ces 2 soirées live gratuites. Ça devrait te parler : " + URL);
+
+  document.getElementById("copier").addEventListener("click", function(){
+    var btn = this;
+    navigator.clipboard.writeText(URL).then(function(){
+      btn.textContent = "Lien copié ✓";
+      setTimeout(function(){ btn.textContent = "Copier le lien"; }, 2200);
+    }).catch(function(){
+      btn.textContent = URL;
+    });
+  });
+})();
+</script>
+</body>
+</html>
